@@ -5,7 +5,7 @@ import { Navbar, Nav, Container } from "react-bootstrap";
 
 function Cabecalho() {
     return (
-        <Navbar bg="light" expand="lg" className="fixed-top">
+        <Navbar bg="light" expand="lg" /* className="fixed-top" */>
             <Container>
                 <Navbar.Brand href="#home">Desafio FullStack</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />

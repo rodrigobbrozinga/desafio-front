@@ -1,7 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
-import Cabecalho from './components/cabecalho'
+import Cabecalho from './components/cabecalho';
 import Rodape from './components/rodape';
+import Desafio1 from './pages/Desafio1/index';
+import Desafio2 from './pages/Desafio2/index';
+import Desafio3 from './pages/Desafio3/index';
+import Desafio4 from './pages/Desafio4/index';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -9,22 +12,10 @@ function App() {
   return (
     <>
       <Cabecalho />
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Desafio1 />
+      <Desafio2 />
+      <Desafio3 />
+      <Desafio4 />
       <Rodape />
     </>
   );
