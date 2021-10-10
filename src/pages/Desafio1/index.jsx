@@ -10,7 +10,7 @@ const Desafio1 = () => {
                     <Card.Title className="text-center">Números palíndromos</Card.Title>
                     <div className="formulario-desafio1">
                         <Form /* onSubmit={submitHandler} */>
-                            <h4>Digite um intervalo</h4>
+                            <h5>Informe um intervalo</h5>
                             <Form.Group className="mb-3" controlId="nome">
                                 <Form.Label>Início</Form.Label>
                                 <input type="number" name="inicio" className="form-control"
