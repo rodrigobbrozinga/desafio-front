@@ -1,15 +1,37 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Card, Form, Button } from 'react-bootstrap';
 
 
 const Desafio1 = () => {
+
+    const [events, setEvents] = useState([]);
+
+    const convertToArray = (obj) => {
+        const arr = [obj];
+        return arr;
+    }
+
+    const submitHandler = (e) => {
+        e.preventDefault();
+        const formData = new FormData(e.target);
+        const data = Object.fromEntries(formData);
+
+        fetch(`http://localhost:3001/?nome=${data.nome}&cep=${data.cep}&renda=${data.renda}&dependentes=${data.dependentes}`)
+            .then(response => response.json())
+            .then(data => {
+                const array = convertToArray(data);
+                setEvents(array);
+            })
+            .catch(error => console.error);
+    }
+
     return (
         <>
             <Card border="secondary" bg="light" className="w-50 m-auto mt-5 mb-5">
                 <Card.Body>
                     <Card.Title className="text-center">Números palíndromos</Card.Title>
                     <div className="formulario-desafio1">
-                        <Form /* onSubmit={submitHandler} */>
+                        <Form onSubmit={submitHandler}>
                             <h5>Informe um intervalo</h5>
                             <Form.Group className="mb-3" controlId="nome">
                                 <Form.Label>Início</Form.Label>
